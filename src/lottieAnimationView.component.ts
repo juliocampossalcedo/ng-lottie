@@ -1,4 +1,4 @@
-import { Component, Input, ngAfterContentInit, Output, EventEmitter, ViewChild, ElementRef, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, Input, AfterContentInit, Output, EventEmitter, ViewChild, ElementRef, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
 
 declare let require: any;
@@ -11,7 +11,7 @@ const lottie: any = require('lottie-web/build/player/lottie.js');
                </div>`
 })
 
-export class LottieAnimationViewComponent implements ngAfterContentInit {
+export class LottieAnimationViewComponent implements AfterContentInit {
     
     constructor(@Inject(PLATFORM_ID) private platformId: string) {}
 
